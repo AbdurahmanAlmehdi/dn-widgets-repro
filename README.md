@@ -7,6 +7,18 @@ Measured on DartNative `3.45.0-0.1.pre` (SDK build `19d573b7668`, framework
 `80edbf105e`, engine `98a127957cb5`, Dart `3.12.0-192.0.dev`), iPhone 17 Pro
 and iPhone 17 Pro Max simulators, iOS 26.1.
 
+| Case | Entrypoint |
+|---|---|
+| A State built after `dispose()` leaves a red placeholder | `lib/main.dart` |
+| `AnnotatedRegion` around a `Scaffold` renders a blank screen | `lib/cases/annotated_region.dart` |
+| `SingleChildScrollView` inside `Center` renders nothing | `lib/cases/centred_scroll_view.dart` |
+| Standard-host `AppBar` doesn't mirror in RTL | `lib/cases/standard_bar_rtl.dart` |
+| `TextField.style.letterSpacing` is ignored | `lib/cases/text_field_letter_spacing.dart` |
+| A formatter's returned caret is ignored on paste | `lib/cases/formatter_paste_caret.dart` |
+
+Run a case with `dn run -d <device> -t <entrypoint>`. Its screenshots are in
+`docs/cases/`.
+
 ## Red band after a root swap — `lib/main.dart`
 
 ```sh
