@@ -24,6 +24,13 @@ bar in RTL (#30) and the paste caret (#31).
 Run a case with `dn run -d <device> -t <entrypoint>`. Its screenshots are in
 `docs/cases/`.
 
+Open issues also have a standalone project under `issues/<name>/` that runs
+with a plain `dn run`:
+
+- `issues/system-bar-actions/`
+- `issues/centred-scroll-view/`
+- `issues/text-field-letter-spacing/`
+
 ## Red band after a root swap — `lib/main.dart`
 
 ```sh
