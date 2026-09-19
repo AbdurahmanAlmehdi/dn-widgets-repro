@@ -3,9 +3,10 @@
 Minimal reproductions of DartNative widget-layer issues, one case per
 entrypoint. Created with `dn create`.
 
-Measured on DartNative `3.45.0-0.1.pre` (SDK build `19d573b7668`, framework
-`80edbf105e`, engine `98a127957cb5`, Dart `3.12.0-192.0.dev`), iPhone 17 Pro
-and iPhone 17 Pro Max simulators, iOS 26.1.
+First measured on DartNative `3.45.0-0.1.pre` (SDK build `19d573b7668`,
+framework `80edbf105e`), iPhone 17 Pro and iPhone 17 Pro Max simulators,
+iOS 26.1. Open cases re-checked on framework `4d6d99e30d` (2026-09-16),
+engine `98a127957cb5`, Dart `3.12.0-192.0.dev`.
 
 | Case | Entrypoint |
 |---|---|
@@ -15,6 +16,10 @@ and iPhone 17 Pro Max simulators, iOS 26.1.
 | Standard-host `AppBar` doesn't mirror in RTL | `lib/cases/standard_bar_rtl.dart` |
 | `TextField.style.letterSpacing` is ignored | `lib/cases/text_field_letter_spacing.dart` |
 | A formatter's returned caret is ignored on paste | `lib/cases/formatter_paste_caret.dart` |
+| A pushed screen with a forced system bar and actions never appears | `lib/cases/system_bar_actions_push.dart` |
+
+Fixed upstream in framework `4d6d99e30d`: the red band (#29), the standard
+bar in RTL (#30) and the paste caret (#31).
 
 Run a case with `dn run -d <device> -t <entrypoint>`. Its screenshots are in
 `docs/cases/`.
